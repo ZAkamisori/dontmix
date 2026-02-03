@@ -1,16 +1,17 @@
 (() => {
-  // ========== ENTER unlock (index) ==========
-  const enter = document.querySelector(".enter");
+  // ====== unlock (index) ======
+  const btn = document.querySelector(".gate__btn");
   const links = document.querySelector(".links");
 
-  if (enter && links) {
-    enter.addEventListener("click", () => {
+  if (btn && links) {
+    btn.addEventListener("click", () => {
       links.classList.remove("is-locked");
       links.classList.add("is-unlocked");
+      document.body.classList.add("is-entered");
     });
   }
 
-  // ========== reveal (about etc.) ==========
+  // ====== reveal (sub pages) ======
   const els = document.querySelectorAll(".reveal");
   if (!els.length) return;
 
