@@ -1,139 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Links: about / message / novel / pixiv" />
+  <meta charset="UTF-8">
   <title>混ぜるな危険</title>
-
-  <link rel="icon" href="./assets/logo-icon.png" />
-  <link rel="stylesheet" href="./style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-  <!-- background -->
-  <div class="bg" aria-hidden="true"></div>
 
-  <!-- HERO -->
-  <header class="hero">
-    <!-- big world sticker (pack②): choose ONE -->
-    <img class="deco deco--hero deco--hero1 float-slow"
-         src="./assets/stickers/p16_heartplanet.png" alt="" aria-hidden="true" />
-    <!-- second big shape (optional, but still within "1~2"): comment out if too loud -->
-    <img class="deco deco--hero deco--hero2 float-slower"
-         src="./assets/stickers/p12_ribbon.png" alt="" aria-hidden="true" />
+  <!-- 中央ステージ -->
+  <div class="stage">
+    <img src="assets/logo-title.png" class="logo" alt="DON'T MIX">
 
-    <div class="hero__inner">
-      <img class="brand" src="./assets/logo-title.png" alt="混ぜるな危険" />
-      <p class="subtitle">illustration and novel</p>
-      <p class="tagline">Do not mix!</p>
-
-      <div class="miniNav">
-        <a class="miniNav__link" href="#links">links</a>
-        <a class="miniNav__link" href="./about.html">about</a>
-      </div>
+    <div class="enter-wrap">
+      <img src="assets/open.png" class="open">
+      <img src="assets/enter.png" class="enter">
     </div>
-  </header>
 
-  <!-- LINKS -->
-  <main id="links" class="wrap">
-    <section class="grid">
-      <!-- ABOUT (internal) -->
-      <a class="card reveal" href="./about.html">
-        <div class="card__top">
-          <div class="pill">INTERNAL</div>
-          <div class="card__icon">
-            <img src="./assets/icons/about.png" alt="" aria-hidden="true" />
-          </div>
-        </div>
-
-        <h2 class="card__title">about</h2>
-        <p class="card__desc">プロフィール / このサイトについて</p>
-        <div class="card__cta">ENTER →</div>
-
-        <!-- small sticker (pack①): ONE per card -->
-        <img class="deco deco--card deco--c1"
-             src="./assets/stickers/s2_sparkle.png" alt="" aria-hidden="true" />
+    <nav class="links">
+      <a href="about.html">
+        <img src="assets/icons/about.png">
+        <span>ABOUT</span>
       </a>
 
-      <!-- MESSAGE (external) -->
-      <a class="card card--alt reveal"
-         href="https://wavebox.me/wave/3nxyoypdy9w72ona/"
-         target="_blank" rel="noopener">
-        <div class="card__top">
-          <div class="pill">EXTERNAL</div>
-          <div class="card__icon">
-            <img src="./assets/icons/message.png" alt="" aria-hidden="true" />
-          </div>
-        </div>
-
-        <h2 class="card__title">message</h2>
-        <p class="card__desc">Wavebox（匿名メッセージ）</p>
-        <div class="card__cta">OPEN →</div>
-
-        <img class="deco deco--card deco--c2"
-             src="./assets/stickers/p14_exclamation.png" alt="" aria-hidden="true" />
+      <a href="https://wavebox.me/wave/3nxyoypdy9w72ona/" target="_blank">
+        <img src="assets/icons/message.png">
+        <span>MESSAGE</span>
       </a>
 
-      <!-- NOVEL (external, not emphasized) -->
-      <a class="card reveal"
-         href="https://zakamisori.github.io/zettaikamizori/"
-         target="_blank" rel="noopener">
-        <div class="card__top">
-          <div class="pill">EXTERNAL</div>
-          <div class="card__icon">
-            <img src="./assets/icons/novel.png" alt="" aria-hidden="true" />
-          </div>
-        </div>
-
-        <h2 class="card__title">novel</h2>
-        <p class="card__desc">小説サイト（外部）</p>
-        <div class="card__cta">OPEN →</div>
-
-        <!-- keep minimal -->
-        <img class="deco deco--card deco--c3"
-             src="./assets/stickers/s4_lightning.png" alt="" aria-hidden="true" />
+      <a href="https://zakamisori.github.io/zettaikamizori/" target="_blank">
+        <img src="assets/icons/novel.png">
+        <span>NOVEL</span>
       </a>
 
-      <!-- PIXIV (external, visual hub) -->
-      <a class="card card--alt reveal"
-         href="https://www.pixiv.net/users/123141201/illustrations"
-         target="_blank" rel="noopener">
-        <div class="card__top">
-          <div class="pill">EXTERNAL</div>
-          <div class="card__icon card__icon--big">
-            <img src="./assets/icons/pixiv.png" alt="" aria-hidden="true" />
-          </div>
-        </div>
-
-        <h2 class="card__title">pixiv</h2>
-        <p class="card__desc">イラスト / 作品まとめ</p>
-        <div class="card__cta">OPEN →</div>
-
-        <img class="deco deco--card deco--c4"
-             src="./assets/stickers/s9_auroraSparkle.png" alt="" aria-hidden="true" />
+      <a href="https://www.pixiv.net/users/123141201" target="_blank">
+        <img src="assets/icons/pixiv.png">
+        <span>PIXIV</span>
       </a>
-    </section>
+    </nav>
+  </div>
 
-    <!-- FOOTER play zone -->
-    <footer class="footer">
-      <div class="footer__inner reveal">
-        <div class="footer__text">
-          <div class="footer__small">©</div>
-          <div class="footer__small">Links only. External sites may open in new tabs.</div>
-        </div>
+  <!-- 装飾 -->
+  <div class="decor">
+    <img src="assets/icons/stickers/s1_star3.png" class="stk s1">
+    <img src="assets/icons/stickers/s2_sparkle.png" class="stk s2">
+    <img src="assets/icons/stickers/s3_heartspeech.png" class="stk s3">
+    <img src="assets/icons/stickers/s4_lightning.png" class="stk s4">
+    <img src="assets/icons/stickers/p15_ghost.png" class="stk s5">
+    <img src="assets/icons/stickers/p16_heartplanet.png" class="stk s6">
+  </div>
 
-        <!-- ② is allowed only here -->
-        <img class="deco deco--foot deco--ghost float-mid"
-             src="./assets/stickers/p15_ghost.png" alt="" aria-hidden="true" />
-        <img class="deco deco--foot deco--spark1 float-fast"
-             src="./assets/stickers/s2_sparkle.png" alt="" aria-hidden="true" />
-        <img class="deco deco--foot deco--spark2 float-slow"
-             src="./assets/stickers/s1_star3.png" alt="" aria-hidden="true" />
-      </div>
-    </footer>
-  </main>
-
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
