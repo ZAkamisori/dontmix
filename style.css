@@ -429,5 +429,46 @@ a:hover{ text-decoration:none; }
   .card__top{ min-height: 76px; }
   .card__icon{ width: 78px; height: 78px; }
   .deco--card{ width: 100px; }
+
+  /* ==================================================
+   sticker burst layer (ADD-ON)
+   既存レイアウトは崩さず、背景にステッカーを散らす
+   ================================================== */
+
+.stickerLayer{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0; /* hero__inner(z-index:2)より後ろ */
+  overflow: hidden;
+}
+
+.sticker{
+  position: absolute;
+  user-select: none;
+  filter: drop-shadow(14px 18px 0 rgba(0,0,0,.08));
+  opacity: .95;
+  transform: rotate(var(--r, 0deg));
+  animation: floatY var(--t, 6.4s) ease-in-out infinite;
+}
+
+/* 配置（好きに増やしてOK） */
+.stk1{ top: 6%;  left: 6%;  width: 140px; --r:-12deg; --t: 7.2s; }
+.stk2{ top: 14%; right: 8%; width: 160px; --r: 10deg; --t: 6.2s; }
+.stk3{ bottom: 10%; left: 10%; width: 170px; --r: 8deg;  --t: 8.0s; }
+.stk4{ bottom: 12%; right: 10%; width: 150px; --r:-10deg; --t: 6.6s; }
+.stk5{ top: 52%; left: -2%; width: 190px; --r: 14deg; --t: 9.0s; opacity:.85; }
+.stk6{ top: 58%; right: -4%; width: 200px; --r:-14deg; --t: 9.6s; opacity:.85; }
+
+/* スマホでは控えめに */
+@media (max-width: 520px){
+  .stk1{ width: 110px; }
+  .stk2{ width: 120px; }
+  .stk3{ width: 120px; }
+  .stk4{ width: 110px; }
+  .stk5{ width: 140px; opacity:.70; }
+  .stk6{ width: 140px; opacity:.70; }
+}
+
   .deco--ghost{ width: 240px; }
 }
