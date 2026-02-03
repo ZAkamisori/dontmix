@@ -3,224 +3,79 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>モノづくりポータル</title>
-  <meta name="description" content="遊びながら学べる、モノづくり学習ポータル。" />
+  <title>Links</title>
+  <meta name="description" content="リンク集" />
   <link rel="stylesheet" href="./assets/style.css" />
 </head>
-
 <body>
-  <a class="skip" href="#main">本文へ</a>
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">LINKS</div>
+      <div class="loader__bar"></div>
+    </div>
+  </div>
 
-  <header class="header">
-    <div class="header__inner">
+  <header class="top">
+    <div class="top__inner">
       <div class="brand">
-        <span class="brand__mark" aria-hidden="true">◆</span>
-        <span class="brand__name">MONOZUKURI KIDS</span>
+        <span class="brand__mark" aria-hidden="true">★</span>
+        <span class="brand__name">My Links</span>
       </div>
 
-      <button class="menuBtn" id="menuBtn" aria-expanded="false" aria-controls="drawer">
-        <span class="menuBtn__icon" aria-hidden="true"></span>
-        <span class="menuBtn__text">MENU</span>
-      </button>
+      <nav class="miniNav" aria-label="メニュー">
+        <a class="miniNav__link" href="./about.html">about</a>
+      </nav>
     </div>
   </header>
 
-  <aside class="drawer" id="drawer" hidden>
-    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="メニュー">
-      <div class="drawer__head">
-        <div class="drawer__title">MENU</div>
-        <button class="drawer__close" id="menuClose" aria-label="メニューを閉じる">×</button>
-      </div>
-
-      <nav class="drawer__nav">
-        <div class="navGroup">
-          <div class="navGroup__label">COURSE</div>
-          <a href="#course" class="navLink">コース</a>
-          <a href="#course" class="navSublink" data-focus="business">ビジネス</a>
-          <a href="#course" class="navSublink" data-focus="engineer">エンジニア</a>
-          <a href="#course" class="navSublink" data-focus="designer">デザイナー</a>
-        </div>
-
-        <div class="navGroup">
-          <div class="navGroup__label">SPECIAL</div>
-          <a href="#special" class="navLink">体験型コンテンツ</a>
-          <a href="#special" class="navSublink">バーチャル工場見学</a>
-          <a href="#special" class="navSublink">クイズレース</a>
-          <a href="#special" class="navSublink">自由研究</a>
-          <a href="#special" class="navSublink">カードギャラリー</a>
-        </div>
-
-        <div class="navGroup">
-          <div class="navGroup__label">OTHER</div>
-          <a href="#other" class="navLink">その他</a>
-          <a href="#other" class="navSublink">SDGs</a>
-          <a href="#other" class="navSublink">クルマの未来</a>
-          <a href="#other" class="navSublink">環境</a>
-          <a href="#other" class="navSublink">交通安全</a>
-          <a href="#other" class="navSublink">保護者・先生へ</a>
-        </div>
-      </nav>
-    </div>
-    <button class="drawer__backdrop" id="backdrop" aria-label="閉じる"></button>
-  </aside>
-
-  <main id="main" class="main">
-    <!-- HERO -->
+  <main class="main">
     <section class="hero">
-      <div class="hero__inner">
-        <p class="hero__kicker">モノづくり好き大集合！</p>
-        <h1 class="hero__title">遊びながら学ぶ<br>クルマづくりと未来</h1>
-        <p class="hero__lead">
-          しくみ・デザイン・ビジネス。気になるコースから始めよう。
-        </p>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#course">コースをえらぶ</a>
-          <a class="btn" href="#special">体験してみる</a>
-        </div>
-
-        <div class="hero__chips" aria-label="おすすめ">
-          <span class="chip">#ものづくり</span>
-          <span class="chip">#科学</span>
-          <span class="chip">#デザイン</span>
-        </div>
+      <div class="hero__copy">
+        <p class="kicker">link hub</p>
+        <h1 class="title">外部リンク集</h1>
+        <p class="lead">SNS・投稿先・作品置き場への入口だけをまとめています。</p>
       </div>
+
       <div class="hero__art" aria-hidden="true">
-        <div class="blob blob--a"></div>
-        <div class="blob blob--b"></div>
-        <div class="blob blob--c"></div>
+        <div class="sticker s1"></div>
+        <div class="sticker s2"></div>
+        <div class="sticker s3"></div>
       </div>
     </section>
 
-    <!-- COURSE -->
-    <section id="course" class="section">
-      <div class="section__head">
-        <h2 class="section__title">COURSE</h2>
-        <p class="section__sub">3つのコースから、好きな入口を選ぶ</p>
-      </div>
+    <section class="cards" aria-label="links">
+      <a class="card reveal" href="./about.html">
+        <div class="card__tag">INTERNAL</div>
+        <div class="card__title">about</div>
+        <div class="card__desc">プロフィール / このサイトについて</div>
+        <div class="card__cta">ENTER →</div>
+      </a>
 
-      <div class="grid" id="courseGrid">
-        <article class="card" data-card="business" tabindex="-1">
-          <div class="card__badge">BUSINESS</div>
-          <h3 class="card__title">ビジネスコース</h3>
-          <p class="card__text">企画〜販売まで。世の中に届く流れを学ぶ。</p>
-          <div class="card__actions">
-            <a class="btn btn--small btn--primary" href="./business.html">START</a>
-          </div>
-        </article>
+      <a class="card card--alt reveal" href="https://example.com" target="_blank" rel="noopener">
+        <div class="card__tag">EXTERNAL</div>
+        <div class="card__title">message</div>
+        <div class="card__desc">告知・更新情報（外部）</div>
+        <div class="card__cta">OPEN →</div>
+      </a>
 
-        <article class="card" data-card="engineer" tabindex="-1">
-          <div class="card__badge">ENGINEER</div>
-          <h3 class="card__title">エンジニアコース</h3>
-          <p class="card__text">しくみ・技術・安全。科学の目でのぞく。</p>
-          <div class="card__actions">
-            <a class="btn btn--small btn--primary" href="./engineer.html">START</a>
-          </div>
-        </article>
+      <a class="card reveal" href="https://example.com" target="_blank" rel="noopener">
+        <div class="card__tag">EXTERNAL</div>
+        <div class="card__title">novel</div>
+        <div class="card__desc">作品ページ（外部）</div>
+        <div class="card__cta">OPEN →</div>
+      </a>
 
-        <article class="card" data-card="designer" tabindex="-1">
-          <div class="card__badge">DESIGNER</div>
-          <h3 class="card__title">デザイナーコース</h3>
-          <p class="card__text">形・色・体験。アイデアを“見える化”する。</p>
-          <div class="card__actions">
-            <a class="btn btn--small btn--primary" href="./designer.html">START</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- SPECIAL -->
-    <section id="special" class="section section--alt">
-      <div class="section__head">
-        <h2 class="section__title">SPECIAL CONTENTS</h2>
-        <p class="section__sub">体験型コンテンツで遊びながら理解する</p>
-      </div>
-
-      <div class="grid">
-        <article class="card card--wide">
-          <div class="card__badge">VIRTUAL</div>
-          <h3 class="card__title">バーチャル工場見学</h3>
-          <p class="card__text">部品が集まって、1台のクルマになるまで。</p>
-          <div class="card__actions">
-            <a class="btn btn--small btn--primary" href="./vfactory.html">START</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__badge">QUIZ</div>
-          <h3 class="card__title">クイズレース</h3>
-          <p class="card__text">正解でスピードUP。ゲームで復習。</p>
-          <div class="card__actions">
-            <a class="btn btn--small" href="./quiz.html">PLAY</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__badge">STUDY</div>
-          <h3 class="card__title">クルマの自由研究</h3>
-          <p class="card__text">まとめ方のヒントと、観察ポイント。</p>
-          <div class="card__actions">
-            <a class="btn btn--small btn--primary" href="./study.html">START</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card__badge">CARD</div>
-          <h3 class="card__title">マイカードギャラリー</h3>
-          <p class="card__text">ページを見てカードを集めよう。</p>
-          <div class="card__actions">
-            <a class="btn btn--small" href="./cards.html">ENTER</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- OTHER -->
-    <section id="other" class="section">
-      <div class="section__head">
-        <h2 class="section__title">OTHER CONTENTS</h2>
-        <p class="section__sub">もう少し知りたい人へ</p>
-      </div>
-
-      <div class="grid grid--tight">
-        <a class="tile" href="./sdgs.html">
-          <span class="tile__title">SDGs</span><span class="tile__arrow">→</span>
-        </a>
-        <a class="tile" href="./future.html">
-          <span class="tile__title">クルマの未来</span><span class="tile__arrow">→</span>
-        </a>
-        <a class="tile" href="./environment.html">
-          <span class="tile__title">環境</span><span class="tile__arrow">→</span>
-        </a>
-        <a class="tile" href="./safety.html">
-          <span class="tile__title">交通安全</span><span class="tile__arrow">→</span>
-        </a>
-        <a class="tile tile--wide" href="./for-parents.html">
-          <span class="tile__title">保護者・先生へ</span><span class="tile__arrow">→</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- CARD (おまけ：収集の雰囲気だけ) -->
-    <section class="section section--alt">
-      <div class="section__head">
-        <h2 class="section__title">今日のカード</h2>
-        <p class="section__sub">「集める」遊びを軽く入れる（ローカル保存）</p>
-      </div>
-
-      <div class="collect">
-        <div class="collect__card" id="dailyCard" aria-live="polite"></div>
-        <div class="collect__actions">
-          <button class="btn btn--small btn--primary" id="getCard">カードを引く</button>
-          <button class="btn btn--small" id="showCollection">集めたカードを見る</button>
-          <button class="btn btn--small btn--ghost" id="resetCollection">リセット</button>
-        </div>
-        <div class="collection" id="collection" hidden></div>
-      </div>
+      <a class="card card--alt reveal" href="https://www.pixiv.net/users/XXXX" target="_blank" rel="noopener">
+        <div class="card__tag">EXTERNAL</div>
+        <div class="card__title">pixiv</div>
+        <div class="card__desc">イラスト / 作品まとめ</div>
+        <div class="card__cta">OPEN →</div>
+      </a>
     </section>
 
     <footer class="footer">
-      <p class="footer__note">© Your Site</p>
+      <p class="footer__note">© Your Name</p>
     </footer>
   </main>
 
