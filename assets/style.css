@@ -312,3 +312,128 @@ body::after{
   .open, .enter, .stk, .sticker, .logo{ animation:none !important; }
   .links a{ transition:none !important; }
 }
+
+/* =========================================================
+   SUB PAGES (about)
+   ========================================================= */
+
+.wrap{
+  width:min(var(--maxStage), calc(100% - 32px));
+  margin: 0 auto;
+  padding: 18px 0 56px;
+  position: relative;
+  z-index: 5;
+}
+
+.subHero{
+  width:min(var(--maxStage), calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 8px;
+  position: relative;
+  z-index: 6;
+}
+
+.back{
+  display:inline-block;
+  padding: 10px 14px;
+  border: 3px solid var(--line);
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paperSoft) 100%);
+  box-shadow: var(--shadowA);
+  font-weight: 900;
+  letter-spacing: .02em;
+  transform: rotate(-.2deg);
+}
+
+.subHero__inner{
+  margin-top: 16px;
+}
+
+.pageTitle{
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: .06em;
+  text-transform: lowercase;
+}
+
+.pageLead{
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.paper{
+  position: relative;
+  border: 3px solid var(--line);
+  border-radius: var(--radius2);
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paperSoft) 100%);
+  box-shadow: var(--shadowA);
+  padding: 22px 18px;
+  overflow: hidden;
+}
+
+.paper__title{
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing: .04em;
+}
+
+.paper__p{
+  margin: 0 0 16px;
+  line-height: 1.9;
+}
+
+.paper__chips{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.chip{
+  display:inline-block;
+  padding: 10px 14px;
+  border: 3px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 14px 28px rgba(0,0,0,.14);
+  font-weight: 900;
+  letter-spacing: .05em;
+}
+
+.deco{
+  position:absolute;
+  pointer-events:none;
+  user-select:none;
+  filter:
+    drop-shadow(18px 22px 0 rgba(0,0,0,.10))
+    drop-shadow(0 0 18px rgba(255,0,122,.16));
+  opacity: .92;
+}
+
+.deco--sub{
+  width: min(320px, 42vw);
+  right: -40px;
+  top: -40px;
+  transform: rotate(10deg);
+}
+
+.deco--paper{
+  width: 160px;
+  right: 12px;
+  bottom: 10px;
+  transform: rotate(-8deg);
+  opacity: .88;
+}
+
+/* reveal animation (about内で使用) */
+.reveal{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.reveal.is-in{
+  opacity: 1;
+  transform: translateY(0);
+}
+
