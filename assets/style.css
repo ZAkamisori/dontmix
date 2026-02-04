@@ -578,3 +578,46 @@ body.is-fx .stickerLayer .sticker{
   filter: none;
 }
 
+/* ===== unlock states ===== */
+.links.is-locked{
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  filter: blur(2px);
+  transition: opacity .35s ease, transform .35s ease, filter .35s ease;
+}
+.links.is-unlocked{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  filter: none;
+}
+
+/* ===== FX layer ===== */
+.fx{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0;
+  background:
+    radial-gradient(900px 380px at 50% 40%, rgba(255,255,255,.95) 0%, rgba(255,255,255,0) 55%),
+    linear-gradient(135deg, rgba(255,0,122,.22), rgba(0,208,255,.18), rgba(255,230,0,.18));
+  mix-blend-mode: screen;
+  filter: contrast(1.2) saturate(1.2);
+}
+
+@keyframes enterFlash{
+  0%   { opacity: 0; transform: scale(1); }
+  20%  { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 0; transform: scale(1.04); }
+}
+@keyframes enterGlitch{
+  0%   { filter: none; }
+  15%  { filter: hue-rotate(20deg) contrast(1.4) saturate(1.4); }
+  30%  { filter: hue-rotate(-18deg) contrast(1.35) saturate(1.35); }
+  100% { filter: none; }
+}
+
+body.is-fx .fx{ animation: enterFlash .42s ease-out both; }
+body.is-fx .stage{ animation: enterGlitch .55s ease-out both; }
