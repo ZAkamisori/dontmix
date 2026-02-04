@@ -1,17 +1,28 @@
 (() => {
-  // ====== unlock (index) ======
-  const btn = document.querySelector(".gate__btn");
+  const btn = document.querySelector(".enter");
   const links = document.querySelector(".links");
 
-  if (btn && links) {
-    btn.addEventListener("click", () => {
-      links.classList.remove("is-locked");
-      links.classList.add("is-unlocked");
-      document.body.classList.add("is-entered");
-    });
-  }
+  const trigger = () => {
+    // FX開始
+    document.body.classList.add("is-fx");
 
-  // ====== reveal (sub pages) ======
+    // リンク解放は少し遅らせる（儀式感）
+    window.setTimeout(() => {
+      if (links) {
+        links.classList.remove("is-locked");
+        links.classList.add("is-unlocked");
+      }
+    }, 180);
+
+    // FXクラスは自動で外す（次に影響させない）
+    window.setTimeout(() => {
+      document.body.classList.remove("is-fx");
+    }, 650);
+  };
+
+  if (btn) btn.addEventListener("click", trigger);
+
+  // reveal（about等）
   const els = document.querySelectorAll(".reveal");
   if (!els.length) return;
 
