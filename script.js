@@ -1,12 +1,11 @@
 (() => {
-  const btn = document.querySelector(".enter");
+  // ENTERボタン（タイポ版 .gate__btn でも、画像版 .enter でも拾う）
+  const btn = document.querySelector(".gate__btn, .enter");
   const links = document.querySelector(".links");
 
   const trigger = () => {
-    // FX開始
     document.body.classList.add("is-fx");
 
-    // リンク解放は少し遅らせる（儀式感）
     window.setTimeout(() => {
       if (links) {
         links.classList.remove("is-locked");
@@ -14,15 +13,14 @@
       }
     }, 180);
 
-    // FXクラスは自動で外す（次に影響させない）
     window.setTimeout(() => {
       document.body.classList.remove("is-fx");
     }, 650);
   };
 
-  if (btn) btn.addEventListener("click", trigger);
+  if (btn && links) btn.addEventListener("click", trigger);
 
-  // reveal（about等）
+  // about等の reveal
   const els = document.querySelectorAll(".reveal");
   if (!els.length) return;
 
